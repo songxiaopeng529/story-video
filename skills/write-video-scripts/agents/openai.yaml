@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Script Writer"
+  short_description: "Create production-ready scripts for any video format"
+  default_prompt: "Use $write-video-scripts to turn this topic into a production-ready video script."

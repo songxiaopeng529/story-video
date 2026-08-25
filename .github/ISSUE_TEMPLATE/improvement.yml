@@ -1,0 +1,32 @@
+name: Skill improvement
+description: Propose a workflow, format, reference, or evaluation improvement
+title: "[Improvement]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Real use case
+      description: Show the user request or production situation this change addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: current_gap
+    attributes:
+      label: Current gap
+      description: Explain what the existing Skill does poorly or cannot express.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the transferable workflow or invariant, not only one desired output.
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation idea
+      description: How can a reviewer tell that the change generalizes?

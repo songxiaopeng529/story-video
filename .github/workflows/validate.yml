@@ -1,0 +1,25 @@
+name: Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Compile validator
+        run: python -m py_compile scripts/validate_repo.py
+      - name: Validate Skill and repository
+        run: python scripts/validate_repo.py
